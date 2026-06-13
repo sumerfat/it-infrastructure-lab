@@ -1,62 +1,63 @@
-# IT Infrastructure & System Administration Lab
+# IT-Infrastruktur & Systemadministration Labor
 
-Welcome to my central IT infrastructure repository. This project serves as a practical portfolio demonstrating my skills in network engineering, enterprise identity management, and system administration, aligning with my professional training (**Cisco CCNA, CompTIA Linux+, Microsoft Learn**).
-
----
-
-## 🛠️ Portfolio Overview
-
-This repository documents hands-on engineering labs across three critical IT domains:
-1. **Enterprise Identity Management:** Active Directory & Microsoft Entra ID workflows.
-2. **Network Topology Design:** Cisco routing, switching, and protocol implementation.
-3. **System Security & Hardening:** Linux server administration and basic automation.
+Willkommen in meinem zentralen Repository für IT-Infrastruktur. Dieses Projekt dient als praktisches Portfolio, das meine Fähigkeiten in den Bereichen Netzwerktechnik, Identitätsmanagement und Systemadministration demonstriert – passend zu meinen Qualifikationen (**Cisco CCNA, CompTIA Linux+, Microsoft Learn**).
 
 ---
 
-## 🔐 Lab 1: Enterprise Identity Management (Active Directory)
+## 🛠️ Portfolio-Übersicht
 
-### **Objective**
-To simulate a corporate network environment by deploying, configuring, and managing user access control, mimicking standard 1st and 2nd level IT support ticketing workflows.
-
-### **Skills Demonstrated**
-* **User Lifecycle Management:** Creating, provisioning, and de-provisioning user accounts based on role-based access control (RBAC).
-* **Security Group Administration:** Implementing nested groups to efficiently manage access to shared network drives and corporate resources.
-* **Troubleshooting Scenarios:** Account lockouts, password resets, and auditing permission inheritance issues.
-
-[Klicke hier, um die Active Directory Dokumentation zu sehen](./lab1-active-directory)
----
-
-## 🌐 Lab 2: Network Topology Design (Cisco CCNA)
-
-### **Objective**
-Designing and implementing a scalable, secure corporate network architecture using Cisco Packet Tracer / GNS3.
-
-### **Core Configurations & Protocols**
-* **Layer 2:** VLAN segmentation, Inter-VLAN routing (Router-on-a-Stick), and Spanning Tree Protocol (STP) optimization.
-* **Layer 3:** IPv4/IPv6 addressing schemes, Static Routing, and OSPF deployment for dynamic path selection.
-* **Network Security:** Access Control Lists (ACLs) for traffic filtering, NAT/PAT configuration, and secure SSH device management.
-
-> **Status:** Network diagrams and configuration files in progress.
+Dieses Repository dokumentiert praxisnahe Labore aus drei kritischen IT-Bereichen:
+1. **Identitätsmanagement:** Active Directory & Microsoft Entra ID Workflows.
+2. **Netzwerkdesign:** Cisco Routing, Switching und Protokoll-Implementierung.
+3. **Systemsicherheit & Hardening:** Linux-Serveradministration und grundlegende Automatisierung.
 
 ---
 
-## 🐧 Lab 3: System Security & Hardening (Linux Administration)
+## 🔐 Labor 1: Identitätsmanagement (Active Directory)
 
-### **Objective**
-Deploying and securing enterprise Linux server environments (Ubuntu/Debian) to protect corporate data and automate routine administration tasks.
+### **Zielsetzung**
+Simulation einer Unternehmensnetzwerk-Umgebung durch die Bereitstellung, Konfiguration und Verwaltung von Benutzerzugriffen, angelehnt an typische Workflows im 1st und 2nd Level IT-Support.
 
-### **Focus Areas**
-* **System Hardening:** Restricting SSH access (disabling root login, changing default ports), and configuring local firewalls (UFW/iptables).
-* **User & Permission Audit:** Managing file system permissions (chmod/chown) and enforcing sudo privileges using the `visudo` command.
-* **Basic Automation:** Writing shell scripts to automate system updates and system health logs.
+### **Demonstrierte Fähigkeiten**
+* **Benutzer-Lifecycle-Management:** Erstellung und Bereitstellung von Benutzerkonten basierend auf rollenbasierter Zugriffskontrolle (RBAC).
+* **Sicherheitsgruppen-Administration:** Implementierung verschachtelter Gruppen zur effizienten Zugriffsteuerung auf Netzlaufwerke.
+* **Fehlersuche & Support:** Behebung von Kontosperrungen, Passwort-Resets und Prüfung von Berechtigungsvererbungen.
+
+👉 **[Hier klicken, um die vollständige Active Directory Dokumentation zu sehen](./lab1-active-directory)**
+
+---
+
+## 🌐 Labor 2: Netzwerkdesign (Cisco CCNA)
+
+### **Zielsetzung**
+Design und Implementierung einer skalierbaren, sicheren Unternehmens-Netzwerkarchitektur mit Cisco Packet Tracer / GNS3.
+
+### **Kernkonfigurationen & Protokolle**
+* **Layer 2:** VLAN-Segmentierung, Inter-VLAN-Routing (Router-on-a-Stick) und STP-Optimierung (Spanning Tree).
+* **Layer 3:** IPv4/IPv6-Adressierungskonzepte, statisches Routing und OSPF-Aktivierung für dynamische Pfadauswahl.
+* **Netzwerksicherheit:** Access Control Lists (ACLs) zur Verkehrsfilterung, NAT/PAT-Konfiguration und sicheres SSH-Gerätemanagement.
+
+> **Status:** Netzwerkdiagramme und Konfigurationsdateien befinden sich in der Vorbereitung.
 
 ---
 
-## 📈 Professional Certifications & Education
-* **Degree:** Graduate Engineer in Telecommunications & Electronics
-* **Networking:** Cisco Certified Network Associate (CCNA)
-* **Methodology:** Professional Scrum Master™ I (PSM I)
-* **In Progress:** Microsoft Learn (Identity and Access Management) | CompTIA Linux+ Curriculum
+## 🐧 Labor 3: Systemsicherheit & Hardening (Linux Administration)
+
+### **Zielsetzung**
+Bereitstellung und Absicherung von Linux-Serverumgebungen (Ubuntu/Debian), um Unternehmensdaten zu schützen und Routineaufgaben zu automatisieren.
+
+### **Schwerpunkte**
+* **System Hardening:** Absicherung des SSH-Zugangs (Root-Login deaktivieren, Standard-Ports ändern) und Konfiguration lokaler Firewalls (UFW/iptables).
+* **Berechtigungs-Audits:** Verwaltung von Dateisystem-Berechtigungen (chmod/chown) und Durchsetzung von sudo-Rechten via `visudo`.
+* **Grundlegende Automatisierung:** Erstellung von Shell-Skripten (Bash) für automatisierte System-Updates und Status-Logs.
 
 ---
-*feel free to Contact me for project collaborations or recruitment inquiries.*
+
+## 📈 Zertifizierungen & Ausbildung
+* **Abschluss:** Dipl.-Ing. Telekommunikation & Elektronik (Ausländischer Abschluss)
+* **Netzwerktechnik:** Cisco Certified Network Associate (CCNA)
+* **Methodik:** Professional Scrum Master™ I (PSM I)
+* **In Ausbildung:** Microsoft Learn (Identity and Access Management) | CompTIA Linux+ Curriculum
+
+---
+*Kontaktieren Sie mich gerne via LinkedIn oder GitHub für Projektaufträge oder Karriere-Möglichkeiten.*
