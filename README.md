@@ -23,8 +23,7 @@ To simulate a corporate network environment by deploying, configuring, and manag
 * **Security Group Administration:** Implementing nested groups to efficiently manage access to shared network drives and corporate resources.
 * **Troubleshooting Scenarios:** Account lockouts, password resets, and auditing permission inheritance issues.
 
-> **Status:** Documentation and step-by-step configuration workflows currently being uploaded.
-
+[Klicke hier, um die Active Directory Dokumentation zu sehen](./lab1-active-directory)
 ---
 
 ## 🌐 Lab 2: Network Topology Design (Cisco CCNA)
