@@ -1,33 +1,33 @@
-# Lab 1: Enterprise Identity Management & User Onboarding
+# Labor 1: Identitätsmanagement & Benutzer-Onboarding (Active Directory)
 
-## 📋 Scenario Overview
-A new employee, **Max Mustermann**, is joining the "Finance" department at a regional corporate office. As part of the IT Support / System Administration team, my task is to securely provision his user account, assign him to the correct departmental security groups, and ensure he has access to the required network shares while maintaining the principle of least privilege.
-
----
-
-## 🛠️ Step-by-Step Administration Workflow
-
-### 1. User Creation & Provisioning
-* **Organizational Unit (OU):** The account is created under the `OU=Finance,OU=Staff,DC=company,DC=local` path to keep the directory structured and ensure specific Group Policy Objects (GPOs) apply to the Finance team.
-* **Account Details:** 
-  * **First Name:** Max
-  * **Last Name:** Mustermann
-  * **User Logon Name (User Principal Name):** `m.mustermann@company.local`
-* **Security Password Policy:** A temporary complex password is generated. The option **"User must change password at next logon"** is explicitly checked to ensure security compliance and user privacy.
-
-### 2. Role-Based Access Control (RBAC) & Group Membership
-Instead of assigning permissions directly to Max's account, role-based access control is managed via Security Groups:
-* **`G-Finance-Users` (Global Group):** Max is added to this group. This automatically maps the department's network drives (e.g., `F:\Finance-Share`) via Group Policy Preferences upon his next login.
-* **`DL-Finance-ReadWrite` (Domain Local Group):** This group controls the actual NTFS folder permissions on the file server. `G-Finance-Users` is nested inside this Domain Local group following Microsoft's AGDLP best practice (Accounts -> Global -> Domain Local -> Permissions).
-
-### 3. Verification & Common Support Troubleshooting
-To ensure a seamless first day for the user, the following standard support verifications are documented:
-* **Account Lockouts:** If the user enters the wrong password 3 times, the account flags as locked. In Active Directory Users and Computers (ADUC), navigating to the user's properties under the **"Account"** tab allows us to check **"Unlock account"** to restore access.
-* **Group Policy Replication:** If the new network drive doesn't appear immediately on the user's machine, running the command `gpupdate /force` in the Windows Command Prompt forces the client to pull the latest directory changes.
+## 📋 Szenario-Übersicht
+Ein neuer Mitarbeiter, **Max Mustermann**, beginnt seine Tätigkeit in der Abteilung "Finanzen" an einem regionalen Unternehmensstandort. Als Teil des IT-Support- / Systemadministrationsteams ist es meine Aufgabe, sein Benutzerkonto sicher bereitzustellen, ihn den korrekten Berechtigungsgruppen zuzuordnen und den Zugriff auf die benötigten Netzlaufwerke unter Einhaltung des "Principle of Least Privilege" (Minimale Rechtevergabe) zu gewährleisten.
 
 ---
 
-## 💻 Technical Environment Summary
-* **Directory Service:** Active Directory Domain Services (AD DS) / Microsoft Entra ID
-* **Management Tools:** Active Directory Users and Computers (ADUC), Administrative Center, Windows Command Prompt.
-* **Focus Skills:** 1st/2nd Level Ticket Resolution, Account Lifecycle, Permissions Management.
+## 🛠️ Schritt-für-Schritt Administrations-Workflow
+
+### 1. Benutzeranlage & Bereitstellung (Provisioning)
+* **Organizational Unit (OU):** Das Konto wird im Pfad `OU=Finanzen,OU=Personal,DC=firma,DC=local` erstellt. Dies sorgt für eine saubere Verzeichnisstruktur und stellt sicher, dass die spezifischen Gruppenrichtlinien (GPOs) der Finanzabteilung greifen.
+* **Benutzerdetails:** 
+  * **Vorname:** Max
+  * **Nachname:** Mustermann
+  * **Benutzeranmeldename (User Principal Name):** `m.mustermann@firma.local`
+* **Passwort-Sicherheitsrichtlinie:** Ein temporäres, komplexes Passwort wird generiert. Die Option **"Benutzer muss Kennwort bei der nächsten Anmeldung ändern"** wird zwingend aktiviert, um die Datenschutz- und Sicherheitsrichtlinien zu erfüllen.
+
+### 2. Rollenbasierte Zugriffskontrolle (RBAC) & Gruppenmitgliedschaften
+Statt Berechtigungen direkt an Max zu vergeben, wird der Zugriff professionell über Sicherheitsgruppen gesteuert (AGDLP-Prinzip):
+* **`G-Finanzen-Mitarbeiter` (Globale Gruppe):** Max wird dieser Gruppe hinzugefügt. Dies steuert die automatische Einbindung des Abteilungs-Netzlaufwerks (z. B. `F:\Finanzen-Share`) via Gruppenrichtlinien-Präferenzen (GPP) bei der Anmeldung.
+* **`DL-Finanzen-ReadWrite` (Domänenlokale Gruppe):** Diese Gruppe kontrolliert die tatsächlichen NTFS-Ordnerberechtigungen auf dem Fileserver. Die globale Gruppe `G-Finanzen-Mitarbeiter` wird in diese domänenlokale Gruppe geschachtelt (Accounts -> Global -> Domain Local -> Permissions).
+
+### 3. Verifizierung & Typische Support-Fehlersuche (Troubleshooting)
+Um einen reibungslosen ersten Arbeitstag zu garantieren, werden folgende Support-Szenarien dokumentiert:
+* **Kontosperrungen:** Gibt der Benutzer sein Passwort 3-mal falsch ein, greift die Kontosperrungsrichtlinie. In *Active Directory-Benutzer und -Computer (ADUC)* wird das Konto über die Eigenschaften des Benutzers im Reiter **"Konto"** mit dem Haken bei **"Konto entsperren"** wieder freigegeben.
+* **Gruppenrichtlinien-Replikation:** Sollte das Netzlaufwerk beim Client nicht sofort erscheinen, erzwingt der Befehl `gpupdate /force` in der Windows-Eingabeaufforderung (CMD) die sofortige Aktualisierung der Richtlinien vom Domänencontroller.
+
+---
+
+## 💻 Technische Umgebung & Tools
+* **Verzeichnisdienst:** Active Directory Domain Services (AD DS) / Microsoft Entra ID
+* **Verwaltungstools:** Active Directory-Benutzer und -Computer (ADUC), Active Directory-Verwaltungscenter, Windows CMD / PowerShell.
+* **Fokus-Fähigkeiten:** 1st/2nd Level Ticket-Lösung, Benutzer-Lifecycle, Berechtigungsmanagement.
