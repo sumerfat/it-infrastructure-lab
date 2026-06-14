@@ -37,7 +37,7 @@ Design und Implementierung einer skalierbaren, sicheren Unternehmens-Netzwerkarc
 * **Layer 3:** IPv4/IPv6-Adressierungskonzepte, statisches Routing und OSPF-Aktivierung für dynamische Pfadauswahl.
 * **Netzwerksicherheit:** Access Control Lists (ACLs) zur Verkehrsfilterung, NAT/PAT-Konfiguration und sicheres SSH-Gerätemanagement.
 
-> **Status:** Netzwerkdiagramme und Konfigurationsdateien befinden sich in der Vorbereitung.
+> 👉 **[Hier klicken, um die vollständige Cisco CCNA Dokumentation zu sehen](./lab2-cisco-ccna)**
 
 ---
 
