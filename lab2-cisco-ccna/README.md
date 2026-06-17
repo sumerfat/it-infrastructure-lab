@@ -67,5 +67,4 @@ router ospf 1
  network 10.0.0.0 0.0.0.3 area 0
  log-adjacency-changes
 
-```markdown
-   Die vollständige interaktive Netzwerktopologie kann über die Datei `unternehmensnetzwerk_ruhrgebiet.pkt` oben im Ordner direkt in Cisco Packet Tracer geladen und getestet werden.
+Die vollständige interaktive Netzwerktopologie kann über die Datei `unternehmensnetzwerk_ruhrgebiet.pkt` oben im Ordner direkt in Cisco Packet Tracer geladen und getestet werden.
